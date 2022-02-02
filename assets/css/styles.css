@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap");
+:root {
+  --yellow: #f5bf23;
+  --black: #111;
+  --light-bg: #eee;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+html::-webkit-scrollbar {
+  background-color: rebeccapurple;
+  width: 25px;
+}
+html::-webkit-scrollbar-track {
+  background-color: red;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: salmon;
+}
+
+section {
+  padding: 5rem 10%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  position: sticky;
+  left: 0;
+  top: -2px;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+}
+.navbar .navbar__title {
+  color: var(--light-bg);
+  font-weight: bold;
+}
+.navbar .navbar__title span {
+  color: var(--yellow);
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 560px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: #616161;
+}
+.navbar ul li a:hover {
+  color: var(--yellow);
+}
+.navbar .nav__icons {
+  font-size: 25px;
+}
+.navbar .nav__icons a {
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  background: var(--light-bg);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+.navbar .nav__icons a:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+.navbar .nav__icons .bx-menu {
+  display: none;
+}
+.navbar .navbar__form {
+  position: absolute;
+  width: 45rem;
+  background-color: var(--white);
+  top: 120%;
+  padding: 15px;
+  text-align: center;
+  display: none;
+}
+.navbar .navbar__form input {
+  width: 100%;
+  background-color: var(--light-bg);
+  padding: 15px;
+  color: var(--black);
+  box-shadow: var(--box-shadow);
+  font-size: 18px;
+}
+.navbar .navbar__form .bx-search-alt-2 {
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  background: var(--light-bg);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+}
+.navbar .navbar__form .bx-search-alt-2:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+.navbar .navbar__form.active {
+  display: flex;
+}
+.navbar .login__form {
+  background-color: var(--white);
+  position: absolute;
+  right: 2%;
+  top: 90px;
+  padding: 25px;
+  text-align: center;
+  width: 400px;
+  display: none;
+}
+.navbar .login__form.active {
+  display: block;
+}
+.navbar .login__form .form__header {
+  font-size: 25px;
+  font-weight: bold;
+}
+.navbar .login__form .form__body {
+  display: flex;
+  flex-direction: column;
+}
+.navbar .login__form .form__body .form__email,
+.navbar .login__form .form__body .form__password {
+  padding: 10px;
+  margin: 5px;
+  background-color: var(--light-bg);
+}
+.navbar .login__form .form__body .form__remember {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.navbar .login__form .form__body .form__remember a {
+  text-decoration: underline;
+  color: var(--black);
+}
+.navbar .login__form .form__body .login__btn {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.navbar .login__form .form__body .login__btn:hover {
+  box-shadow: 2px 2px 2px #444;
+  background-color: var(--yellow);
+}
+.navbar .login__form .form__body small span a {
+  text-decoration: underline;
+  color: var(--black);
+}
+
+.contact__info {
+  background-color: aqua;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 25rem;
+  height: 100%;
+  background-color: var(--white);
+  text-align: center;
+  z-index: 1000;
+  padding: 20px;
+  display: none;
+}
+.contact__info.active {
+  display: block;
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+}
+.contact__info #close-contact-info {
+  font-size: 20px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.contact__info #close-contact-info:hover {
+  transform: rotate(30deg);
+}
+.contact__info .contact__phone,
+.contact__info .contact__email,
+.contact__info .contact__address {
+  padding: 25px;
+  margin: 10px 10px;
+}
+.contact__info .contact__phone .bxs-phone,
+.contact__info .contact__phone .bx-mail-send,
+.contact__info .contact__phone .bxs-map,
+.contact__info .contact__email .bxs-phone,
+.contact__info .contact__email .bx-mail-send,
+.contact__info .contact__email .bxs-map,
+.contact__info .contact__address .bxs-phone,
+.contact__info .contact__address .bx-mail-send,
+.contact__info .contact__address .bxs-map {
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  background: var(--light-bg);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+}
+.contact__info .contact__phone .bxs-phone:hover,
+.contact__info .contact__phone .bx-mail-send:hover,
+.contact__info .contact__phone .bxs-map:hover,
+.contact__info .contact__email .bxs-phone:hover,
+.contact__info .contact__email .bx-mail-send:hover,
+.contact__info .contact__email .bxs-map:hover,
+.contact__info .contact__address .bxs-phone:hover,
+.contact__info .contact__address .bx-mail-send:hover,
+.contact__info .contact__address .bxs-map:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+.contact__info .contact__phone p,
+.contact__info .contact__email p,
+.contact__info .contact__address p {
+  color: var(--black);
+  margin: 5px 0px;
+}
+.contact__info .contact__media_social {
+  margin: 25px 10px;
+}
+.contact__info .contact__media_social i {
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  background: var(--light-bg);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  margin: 0 5px;
+}
+.contact__info .contact__media_social i:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.home {
+  padding: 0;
+  height: 90vh;
+}
+.home .swiper {
+  height: 100%;
+}
+.home .slide {
+  align-items: center;
+  background-position: center !important;
+  background-size: cover !important;
+  display: flex;
+  position: relative;
+}
+.home .slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--white), transparent);
+}
+.home .slide .content {
+  position: relative;
+  width: 40rem;
+  top: -84px;
+}
+.home .slide .content h3 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.home .slide .content p {
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+.home .slide .content a {
+  background-color: var(--black);
+  width: 120px;
+  color: var(--white);
+  padding: 15px;
+  cursor: pointer;
+}
+.home .slide .content a:hover {
+  box-shadow: var(--box-shadow);
+}
+.home .swiper-button-prev,
+.home .swiper-button-next {
+  bottom: 0;
+  top: initial;
+  left: initial;
+  right: 0;
+  height: 80px;
+  width: 91px;
+  background: var(--white);
+}
+.home .swiper-button-prev::after,
+.home .swiper-button-next::after {
+  color: var(--black);
+  font-size: 25px;
+}
+.home .swiper-button-prev {
+  right: 5.5rem;
+}
+
+/* --------------------------------------------------- MEDIA QUERYS --------------------------------------------------------------------*/
+@media (max-width: 1200px) {
+  section {
+    padding: 3rem 5%;
+  }
+}
+@media (max-width: 950px) {
+  html {
+    font-size: 80%;
+  }
+
+  section {
+    padding: 3rem 2rem;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+  .navbar ul {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    background-color: var(--white);
+  }
+  .navbar ul.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .navbar ul li {
+    margin: 10px 25px;
+  }
+  .navbar .nav__icons .bx-menu {
+    display: inline-block;
+  }
+}
+@media (max-width: 450px) {
+  .navbar .login__form {
+    max-width: 280px;
+  }
+  .navbar .login__form .form__remember {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

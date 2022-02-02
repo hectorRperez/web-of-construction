@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<!-- ------- Box icons --------->
+		<link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+
+		<!-- Animated CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+		<!-- ------- CSS CUSTOM --------->
+		<link rel="stylesheet" href="assets/css/styles.css" />
+
+		<!-- -------- Swiper -------- -->
+		<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	</head>
+	<body>
+		<!-- ------ START HEADER -------- -->
+		<header class="header">
+			<nav class="navbar">
+				<h2 class="navbar__title">We<span>Build</span> </h2>
+
+				<ul id="navbar__list">
+					<li> <a href="#">Home</a> </li>
+					<li> <a href="#">About</a> </li>
+					<li> <a href="#">Services</a> </li>
+					<li> <a href="#">Projects</a> </li>
+					<li> <a href="#">Pricing</a> </li>
+					<li> <a href="#">Contact</a> </li>
+					<li> <a href="#">Blogs</a> </li>
+				</ul>
+
+				<div class="nav__icons">
+					<a href="#" class="bx bxs-info-circle"> </a>
+					<a href="#" id="btn_search" class="bx bx-search-alt-2"> </a>
+					<a href="#" class="bx bxs-user"> </a>
+					<a id="btn_menu" class="bx bx-menu" href="#"> </a>
+				</div>
+
+				<form class="navbar__form animate__animated animate__fadeInRight">
+					<input type="text" placeholder="search here..." />
+					<label for="" class="bx bx-search-alt-2"></label>
+				</form>
+
+				<form action="" class="login__form">
+					<div class="form__header"> Login Now </div>
+					<div class="form__body">
+						<input type="email" class="form__email" placeholder="email" />
+						<input type="password" class="form__password" placeholder="password" />
+
+						<div class="form__remember">
+							<div class="form__check">
+								<input type="checkbox" id="form__checkbox" name="remermbe_me" />
+								<label for="">Remember me</label>
+							</div>
+							<a href="#">Forgot password?</a>
+						</div>
+
+						<button type="button" class="login__btn">Login Now</button>
+						<small
+							>don't have an account?
+							<span> <a href="#">register now</a> </span>
+						</small>
+					</div>
+				</form>
+			</nav>
+		</header>
+
+		<div class="contact__info">
+			<div id="close-contact-info" class="bx bx-x"></div>
+
+			<div class="contact__phone">
+				<i class="bx bxs-phone"></i>
+				<h3>Phone Number</h3>
+				<p>+123-456-78902</p>
+				<p>+111-456-78902</p>
+			</div>
+
+			<div class="contact__email">
+				<i class="bx bx-mail-send"></i>
+				<h3>Phone Number</h3>
+				<p>example@gmail.com</p>
+				<p>example@gmail.com</p>
+			</div>
+
+			<div class="contact__address">
+				<i class="bx bxs-map"></i>
+				<h3>Office Address</h3>
+				<p>mumbai, india - 40454</p>
+			</div>
+
+			<div class="contact__media_social">
+				<i class="bx bxl-facebook"></i>
+				<i class="bx bxl-twitter"></i>
+				<i class="bx bxl-instagram"></i>
+				<i class="bx bxl-linkedin-square"></i>
+			</div>
+		</div>
+
+		<section class="home" id="home">
+			<div class="swiper home-slider">
+				<div class="swiper-wrapper">
+					<!-- Slide 1 -->
+					<section class="swiper-slide slide" style="background: url('/assets/img/home-slide-1.jpg') no-repeat">
+						<div class="content">
+							<h3>we provide best quality</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum incidunt adipisci laboriosam repellat ex molestiae!</p>
+							<a href="#about" class="btn">Get started</a>
+						</div>
+					</section>
+
+					<!-- Slide 2 -->
+					<section class="swiper-slide slide" style="background: url('/assets/img/home-slide-2.jpg') no-repeat">
+						<div class="content">
+							<h3>we provide best quality</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum incidunt adipisci laboriosam repellat ex molestiae!</p>
+							<a href="#about" class="btn">Get started</a>
+						</div>
+					</section>
+
+					<!-- Slide 3-->
+					<section class="swiper-slide slide" style="background: url('/assets/img/home-slide-3.jpg') no-repeat">
+						<div class="content">
+							<h3>we provide best quality</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum incidunt adipisci laboriosam repellat ex molestiae!</p>
+							<a href="#about" class="btn">Get started</a>
+						</div>
+					</section>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</section>
+		<!-- ------ END HEADER -------- -->
+
+		<!-- ---------- CUSTOM JS --------- -->
+		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/slider.js"></script>
+	</body>
+</html>
