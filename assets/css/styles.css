@@ -16,6 +16,11 @@
   border: none;
 }
 
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -323,24 +328,99 @@ body {
 }
 .home .slide .content a:hover {
   box-shadow: var(--box-shadow);
+  background-color: var(--yellow);
+  transition: 0.4s ease-in-out;
 }
 .home .swiper-button-prev,
 .home .swiper-button-next {
+  background: var(--white);
   bottom: 0;
-  top: initial;
+  height: 80px;
   left: initial;
   right: 0;
-  height: 80px;
+  top: initial;
   width: 91px;
-  background: var(--white);
 }
 .home .swiper-button-prev::after,
 .home .swiper-button-next::after {
   color: var(--black);
   font-size: 25px;
 }
+.home .swiper-button-prev::after:hover,
+.home .swiper-button-next::after:hover {
+  background-color: rebeccapurple;
+}
 .home .swiper-button-prev {
   right: 5.5rem;
+}
+
+.about .about__title {
+  border-left: 10px solid var(--yellow);
+  font-weight: bold;
+  color: var(--black);
+  padding-left: 10px;
+  margin-bottom: 25px;
+}
+.about .row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.about .row .video {
+  flex: 1 1 20rem;
+}
+.about .row .video video {
+  width: 100%;
+  box-shadow: -14px 20px 0px 5px var(--yellow);
+}
+.about .row .content {
+  flex: 1 1 20rem;
+}
+.about .row .content h2 {
+  text-transform: capitalize;
+}
+.about .row .content .btn__content {
+  margin-top: 10px;
+  background-color: var(--black);
+  width: 120px;
+  color: var(--white);
+  padding: 15px;
+  cursor: pointer;
+}
+.about .row .content .btn__content:hover {
+  box-shadow: var(--box-shadow);
+  background-color: var(--yellow);
+  transition: 0.4s ease-in-out;
+}
+.about .box-container {
+  margin-top: 45px;
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about .box-container .box {
+  background-color: var(--light-bg);
+  padding: 30px 15px;
+  text-align: center;
+  flex: 1 1 90px;
+}
+.about .box-container .box .title_1 {
+  animation: counter 5s infinite alternate ease-in-out;
+  counter-set: num var(--num);
+}
+.about .box-container .box .title_1::after {
+  content: counter(num);
+}
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 100;
+  }
 }
 
 /* --------------------------------------------------- MEDIA QUERYS --------------------------------------------------------------------*/
@@ -387,6 +467,10 @@ body {
   }
   .navbar .login__form .form__remember {
     flex-direction: column;
+  }
+
+  .content {
+    text-align: center;
   }
 }
 

@@ -40,6 +40,8 @@
 
 	&:hover {
 		box-shadow: var(--box-shadow);
+		background-color: var(--yellow);
+		transition: 0.4s ease-in-out;
 	}
 }
 
@@ -56,6 +58,38 @@
 	&:hover {
 		background-color: var(--black);
 		color: var(--white);
+	}
+}
+
+@mixin titleSecction {
+	border-left: 10px solid var(--yellow);
+	font-weight: bold;
+	color: var(--black);
+	padding-left: 10px;
+	margin-bottom: 25px;
+}
+
+@property --num {
+	syntax: '<integer>';
+	initial-value: 0;
+	inherits: false;
+}
+
+@mixin counterNumber($from, $to) {
+	animation: counter 5s infinite alternate ease-in-out;
+	counter-set: num var(--num);
+	&::after {
+		content: counter(num);
+	}
+
+	@keyframes counter {
+		from {
+			--num: 0;
+		}
+
+		to {
+			--num: 100;
+		}
 	}
 }
 
@@ -346,23 +380,81 @@ body {
 	}
 	.swiper-button-prev,
 	.swiper-button-next {
+		background: var(--white);
 		bottom: 0;
-		top: initial;
+		height: 80px;
 		left: initial;
 		right: 0;
-		height: 80px;
+		top: initial;
 		width: 91px;
-		background: var(--white);
 	}
 
 	.swiper-button-prev::after,
 	.swiper-button-next::after {
 		color: var(--black);
 		font-size: 25px;
+
+		&:hover {
+			background-color: rebeccapurple;
+		}
 	}
 
 	.swiper-button-prev {
 		right: 5.5rem;
+	}
+}
+
+.about {
+	.about__title {
+		@include titleSecction();
+	}
+
+	.row {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+
+		.video {
+			flex: 1 1 20rem;
+			video {
+				width: 100%;
+				box-shadow: -14px 20px 0px 5px var(--yellow);
+			}
+		}
+
+		.content {
+			flex: 1 1 20rem;
+
+			h2 {
+				text-transform: capitalize;
+			}
+
+			.btn__content {
+				margin-top: 10px;
+				@include btnCallToAction();
+			}
+		}
+	}
+
+	.box-container {
+		margin-top: 45px;
+		display: flex;
+		gap: 25px;
+		justify-content: space-between;
+		display: flex;
+		flex-wrap: wrap;
+
+		.box {
+			background-color: var(--light-bg);
+			padding: 30px 15px;
+			text-align: center;
+			flex: 1 1 90px;
+
+			& .title_1 {
+				@include counterNumber(0, 10);
+			}
+		}
 	}
 }
 
@@ -419,5 +511,8 @@ body {
 		.form__remember {
 			flex-direction: column;
 		}
+	}
+	.content {
+		text-align: center;
 	}
 }
