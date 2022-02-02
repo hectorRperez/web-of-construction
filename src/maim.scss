@@ -7,6 +7,10 @@
 	--box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 	--border: 0.1rem solid rgba(0, 0, 0, 0.3);
 	--white: #fff;
+	--counterExperience: counterExperience;
+	--proyectCompleted: proyectCompleted;
+	--satisfiedClients: satisfiedClients;
+	--activeWorkers: activeWorkers;
 }
 
 * {
@@ -75,20 +79,50 @@
 	inherits: false;
 }
 
-@mixin counterNumber($from, $to) {
-	animation: counter 5s infinite alternate ease-in-out;
+@mixin counterNumber($keyFrame) {
+	animation: $keyFrame 5s normal forwards ease-in-out;
 	counter-set: num var(--num);
 	&::after {
 		content: counter(num);
 	}
 
-	@keyframes counter {
+	@keyframes counterExperience {
 		from {
 			--num: 0;
 		}
 
 		to {
+			--num: 10;
+		}
+	}
+
+	@keyframes proyectCompleted {
+		from {
 			--num: 100;
+		}
+
+		to {
+			--num: 1500;
+		}
+	}
+
+	@keyframes satisfiedClients {
+		from {
+			--num: 100;
+		}
+
+		to {
+			--num: 750;
+		}
+	}
+
+	@keyframes activeWorkers {
+		from {
+			--num: 100;
+		}
+
+		to {
+			--num: 400;
 		}
 	}
 }
@@ -452,7 +486,19 @@ body {
 			flex: 1 1 90px;
 
 			& .title_1 {
-				@include counterNumber(0, 10);
+				@include counterNumber(var(--counterExperience));
+			}
+
+			& .title_2 {
+				@include counterNumber(var(--proyectCompleted));
+			}
+
+			& .title_3 {
+				@include counterNumber(var(--satisfiedClients));
+			}
+
+			& .title_4 {
+				@include counterNumber(var(--activeWorkers));
 			}
 		}
 	}

@@ -6,6 +6,10 @@
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   --border: 0.1rem solid rgba(0, 0, 0, 0.3);
   --white: #fff;
+  --counterExperience: counterExperience;
+  --proyectCompleted: proyectCompleted;
+  --satisfiedClients: satisfiedClients;
+  --activeWorkers: activeWorkers;
 }
 
 * {
@@ -408,18 +412,159 @@ body {
   flex: 1 1 90px;
 }
 .about .box-container .box .title_1 {
-  animation: counter 5s infinite alternate ease-in-out;
+  animation: var(--counterExperience) 5s normal forwards ease-in-out;
   counter-set: num var(--num);
 }
 .about .box-container .box .title_1::after {
   content: counter(num);
 }
-@keyframes counter {
+@keyframes counterExperience {
   from {
     --num: 0;
   }
   to {
+    --num: 10;
+  }
+}
+@keyframes proyectCompleted {
+  from {
     --num: 100;
+  }
+  to {
+    --num: 1500;
+  }
+}
+@keyframes satisfiedClients {
+  from {
+    --num: 100;
+  }
+  to {
+    --num: 750;
+  }
+}
+@keyframes activeWorkers {
+  from {
+    --num: 100;
+  }
+  to {
+    --num: 400;
+  }
+}
+.about .box-container .box .title_2 {
+  animation: var(--proyectCompleted) 5s normal forwards ease-in-out;
+  counter-set: num var(--num);
+}
+.about .box-container .box .title_2::after {
+  content: counter(num);
+}
+@keyframes counterExperience {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 10;
+  }
+}
+@keyframes proyectCompleted {
+  from {
+    --num: 100;
+  }
+  to {
+    --num: 1500;
+  }
+}
+@keyframes satisfiedClients {
+  from {
+    --num: 100;
+  }
+  to {
+    --num: 750;
+  }
+}
+@keyframes activeWorkers {
+  from {
+    --num: 100;
+  }
+  to {
+    --num: 400;
+  }
+}
+.about .box-container .box .title_3 {
+  animation: var(--satisfiedClients) 5s normal forwards ease-in-out;
+  counter-set: num var(--num);
+}
+.about .box-container .box .title_3::after {
+  content: counter(num);
+}
+@keyframes counterExperience {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 10;
+  }
+}
+@keyframes proyectCompleted {
+  from {
+    --num: 100;
+  }
+  to {
+    --num: 1500;
+  }
+}
+@keyframes satisfiedClients {
+  from {
+    --num: 100;
+  }
+  to {
+    --num: 750;
+  }
+}
+@keyframes activeWorkers {
+  from {
+    --num: 100;
+  }
+  to {
+    --num: 400;
+  }
+}
+.about .box-container .box .title_4 {
+  animation: var(--activeWorkers) 5s normal forwards ease-in-out;
+  counter-set: num var(--num);
+}
+.about .box-container .box .title_4::after {
+  content: counter(num);
+}
+@keyframes counterExperience {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 10;
+  }
+}
+@keyframes proyectCompleted {
+  from {
+    --num: 100;
+  }
+  to {
+    --num: 1500;
+  }
+}
+@keyframes satisfiedClients {
+  from {
+    --num: 100;
+  }
+  to {
+    --num: 750;
+  }
+}
+@keyframes activeWorkers {
+  from {
+    --num: 100;
+  }
+  to {
+    --num: 400;
   }
 }
 
