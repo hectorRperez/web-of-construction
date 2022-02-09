@@ -629,6 +629,7 @@ body {
   flex: 1 1 350px;
   background-color: var(--white);
   cursor: pointer;
+  text-decoration: none;
 }
 .our-projects .our-projects__container .box img {
   width: 100%;
@@ -637,12 +638,15 @@ body {
 .our-projects .our-projects__container .box .box__content {
   margin-top: -6px;
   display: flex;
+  color: darkgray;
 }
 .our-projects .our-projects__container .box .box__content .box__description {
   padding: 15px;
+  width: 100%;
 }
 .our-projects .our-projects__container .box .box__content .box__description h3 {
   font-size: 1.2rem;
+  color: var(--black);
 }
 .our-projects .our-projects__container .box .box__content button {
   background-color: var(--yellow);

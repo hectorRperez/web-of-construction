@@ -560,6 +560,7 @@ body {
 			flex: 1 1 350px;
 			background-color: var(--white);
 			cursor: pointer;
+			text-decoration: none;
 
 			img {
 				width: 100%;
@@ -575,12 +576,15 @@ body {
 			.box__content {
 				margin-top: -6px;
 				display: flex;
+				color: rgb(169, 169, 169);
 
 				.box__description {
 					padding: 15px;
+					width: 100%;
 
 					h3 {
 						font-size: 1.2rem;
+						color: var(--black);
 					}
 				}
 
