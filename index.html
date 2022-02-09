@@ -17,6 +17,15 @@
 
 		<!-- -------- Swiper -------- -->
 		<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+		<!-- lightgallery-js -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
+			integrity="sha512-kwJUhJJaTDzGp6VTPBbMQWBFUof6+pv0SM3s8fo+E6XnPmVmtfwENK0vHYup3tsYnqHgRDoBDTJWoq7rnQw2+g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 	</head>
 	<body>
 		<!-- ------ START HEADER -------- -->
@@ -178,9 +187,156 @@
 		</section>
 		<!-- ------ END ABOUT ------ -->
 
-		<!-- ---------- CUSTOM JS --------- -->
+		<!-- ------ START OUR SERVICES -------->
+		<section class="service">
+			<h2 class="service__title">Our Services</h2>
+
+			<div class="services__container">
+				<div class="services__item">
+					<img src="assets/img/service-1.png" alt="" />
+					<h3>Building Construction</h3>
+					<p>Lorem ipsum dolor sit amet.</p>
+				</div>
+
+				<div class="services__item">
+					<img src="assets/img/service-2.png" alt="" />
+					<h3>House Renovation</h3>
+					<p>Lorem ipsum dolor sit amet.</p>
+				</div>
+
+				<div class="services__item">
+					<img src="assets/img/service-3.png" alt="" />
+					<h3>Achitecture Desing</h3>
+					<p>Lorem ipsum dolor sit amet.</p>
+				</div>
+
+				<div class="services__item">
+					<img src="assets/img/service-4.png" alt="" />
+					<h3>Material Supply</h3>
+					<p>Lorem ipsum dolor sit amet.</p>
+				</div>
+
+				<div class="services__item">
+					<img src="assets/img/service-5.png" alt="" />
+					<h3>Construction Consultant</h3>
+					<p>Lorem ipsum dolor sit amet.</p>
+				</div>
+
+				<div class="services__item">
+					<img src="assets/img/service-6.png" alt="" />
+					<h3>Interior Desing</h3>
+					<p>Lorem ipsum dolor sit amet.</p>
+				</div>
+
+				<div class="services__item">
+					<img src="assets/img/service-7.png" alt="" />
+					<h3>Building Maintenance</h3>
+					<p>Lorem ipsum dolor sit amet.</p>
+				</div>
+
+				<div class="services__item">
+					<img src="assets/img/service-8.png" alt="" />
+					<h3>Building Renovation</h3>
+					<p>Lorem ipsum dolor sit amet.</p>
+				</div>
+			</div>
+		</section>
+		<!-- ------ END OUR SERVICES -------->
+
+		<!-- ------ START OUR PROJECTS -------->
+		<section class="our-projects">
+			<h2 class="service__title">Our Services</h2>
+
+			<div class="our-projects__container">
+				<div class="box">
+					<img src="assets/img/project-1.jpg" alt="" />
+					<div class="box__content">
+						<div class="box__description">
+							<h3>Lorem, ipsum dolor.</h3>
+							<p>Lorem ipsum dolor sit amet consectetur.</p>
+						</div>
+						<button> + </button>
+					</div>
+				</div>
+
+				<div class="box">
+					<img src="assets/img/project-2.jpg" alt="" />
+					<div class="box__content">
+						<div class="box__description">
+							<h3>Lorem, ipsum dolor.</h3>
+							<p>Lorem ipsum dolor sit amet consectetur.</p>
+						</div>
+						<button> + </button>
+					</div>
+				</div>
+
+				<div class="box">
+					<img src="assets/img/project-3.jpg" alt="" />
+
+					<div class="box__content">
+						<div class="box__description">
+							<h3>Lorem, ipsum dolor.</h3>
+							<p>Lorem ipsum dolor sit amet consectetur.</p>
+						</div>
+						<button> + </button>
+					</div>
+				</div>
+
+				<div class="box">
+					<img src="assets/img/project-4.jpg" alt="" />
+
+					<div class="box__content">
+						<div class="box__description">
+							<h3>Lorem, ipsum dolor.</h3>
+							<p>Lorem ipsum dolor sit amet consectetur.</p>
+						</div>
+						<button> + </button>
+					</div>
+				</div>
+
+				<div class="box">
+					<img src="assets/img/project-5.jpg" alt="" />
+
+					<div class="box__content">
+						<div class="box__description">
+							<h3>Lorem, ipsum dolor.</h3>
+							<p>Lorem ipsum dolor sit amet consectetur.</p>
+						</div>
+						<button> + </button>
+					</div>
+				</div>
+
+				<div class="box">
+					<img src="assets/img/project-6.jpg" alt="" />
+
+					<div class="box__content">
+						<div class="box__description">
+							<h3>Lorem, ipsum dolor.</h3>
+							<p>Lorem ipsum dolor sit amet consectetur.</p>
+						</div>
+						<button> + </button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ------ END OUR PROJECTS -------->
+
 		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-		<script src="assets/js/main.js"></script>
+
+		<!-- lightgallery-js -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"
+			integrity="sha512-b4rL1m5b76KrUhDkj2Vf14Y0l1NtbiNXwV+SzOzLGv6Tz1roJHa70yr8RmTUswrauu2Wgb/xBJPR8v80pQYKtQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+
+		<!-- ---------- CUSTOM JS --------- -->
 		<script src="assets/js/slider.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			lightGallery(document.querySelector('.our-projects .our-projects__container'));
+		</script>
 	</body>
 </html>

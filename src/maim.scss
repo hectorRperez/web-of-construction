@@ -80,6 +80,7 @@
 }
 
 @mixin counterNumber($keyFrame) {
+	font-size: 25px;
 	animation: $keyFrame 5s normal forwards ease-in-out;
 	counter-set: num var(--num);
 	&::after {
@@ -458,7 +459,9 @@ body {
 		}
 
 		.content {
+			margin-top: 25px;
 			flex: 1 1 20rem;
+			text-align: left;
 
 			h2 {
 				text-transform: capitalize;
@@ -499,6 +502,95 @@ body {
 
 			& .title_4 {
 				@include counterNumber(var(--activeWorkers));
+			}
+		}
+	}
+}
+
+.service {
+	background-color: var(--light-bg);
+	.service__title {
+		@include titleSecction();
+	}
+
+	.services__container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 25px 10px;
+		justify-content: center;
+
+		.services__item {
+			background-color: var(--white);
+			text-align: center;
+			padding: 35px;
+			flex: 1 1 250px;
+			box-shadow: var(--box-shadow);
+
+			&:hover img {
+				transform: translateY(-1rem);
+				transition: 0.3s ease-in-out;
+			}
+
+			img {
+				width: 70px;
+			}
+
+			p {
+				color: gray;
+			}
+		}
+	}
+}
+
+.our-projects {
+	background-color: var(--black);
+
+	.service__title {
+		@include titleSecction();
+		color: var(--white);
+	}
+
+	.our-projects__container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 25px 15px;
+		justify-content: center;
+
+		.box {
+			flex: 1 1 350px;
+			background-color: var(--white);
+			cursor: pointer;
+
+			img {
+				width: 100%;
+				object-fit: cover;
+
+				&:hover {
+					//FIXME: El hover de la imagen debe hacer crecer la img en scale(1.1)
+					//Pero el elemento se rompe
+					// transform: scale(1.1);
+				}
+			}
+
+			.box__content {
+				margin-top: -6px;
+				display: flex;
+
+				.box__description {
+					padding: 15px;
+
+					h3 {
+						font-size: 1.2rem;
+					}
+				}
+
+				button {
+					background-color: var(--yellow);
+					width: 80px;
+					font-size: 45px;
+					color: var(--white);
+					font-weight: bold;
+				}
 			}
 		}
 	}
