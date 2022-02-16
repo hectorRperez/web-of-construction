@@ -132,19 +132,6 @@ html {
 	overflow-x: hidden;
 	scroll-behavior: smooth;
 	scroll-padding-top: 7rem;
-
-	&::-webkit-scrollbar {
-		background-color: rebeccapurple;
-		width: 25px;
-	}
-
-	&::-webkit-scrollbar-track {
-		background-color: red;
-	}
-
-	&::-webkit-scrollbar-thumb {
-		background-color: salmon;
-	}
 }
 
 section {
@@ -594,6 +581,76 @@ body {
 					font-size: 45px;
 					color: var(--white);
 					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+.ourPricing {
+	background-color: var(--light-bg);
+
+	.service__title {
+		@include titleSecction();
+	}
+
+	.row {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		gap: 10px;
+
+		.box {
+			flex: 1 1 120px;
+			text-align: center;
+			background: var(--white);
+			padding: 1rem;
+
+			.box__header {
+				& i {
+					background: var(--yellow);
+					padding: 20px;
+					border-radius: 100px;
+					border: none;
+					font-size: 35px;
+				}
+
+				h2 {
+					font-size: 15px;
+					font-weight: 400;
+					margin: 14px 0;
+					color: grey;
+				}
+
+				.box__price {
+					font-size: 50px;
+					font-weight: 400;
+
+					span {
+						font-size: 18px;
+						margin-right: -10px;
+					}
+
+					small {
+						font-size: 18px;
+						margin-left: -10px;
+					}
+				}
+			}
+
+			.box__body {
+				& ul {
+					font-weight: 300;
+					margin-bottom: 25px;
+
+					& li {
+						list-style-type: none;
+						margin: 10px 0;
+						color: grey;
+					}
+				}
+				button {
+					@include btnCallToAction();
 				}
 			}
 		}
